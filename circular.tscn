@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1t3ft2njbggd"]
+
+[ext_resource type="Script" uid="uid://4534tujesh61" path="res://circle.gd" id="1_cadhu"]
+[ext_resource type="Texture2D" uid="uid://cd02lbh6i3pdt" path="res://icon.svg" id="2_amn7v"]
+
+[node name="Circular" type="Node2D"]
+script = ExtResource("1_cadhu")
+
+[node name="Mouse" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(576, 24)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_amn7v")
+
+[node name="Cat" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(576, 324)
+rotation = 3.14159
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_amn7v")
+
+[node name="MouseCurve" type="Line2D" parent="."]
+z_index = -1
+default_color = Color(0, 1, 0, 0.078431375)
+
+[node name="CatCurve" type="Line2D" parent="."]
+z_index = -1
+default_color = Color(1, 0, 0, 0.078431375)
