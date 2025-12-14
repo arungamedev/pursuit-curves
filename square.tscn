@@ -1,31 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1t3ft2njbggd"]
+[gd_scene load_steps=3 format=3 uid="uid://cnfbi4odleb8g"]
 
-[ext_resource type="Script" uid="uid://4534tujesh61" path="res://circle.gd" id="1_cadhu"]
-[ext_resource type="Texture2D" uid="uid://cd02lbh6i3pdt" path="res://icon.svg" id="2_amn7v"]
+[ext_resource type="Script" uid="uid://cnagdyggy8ubr" path="res://square.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cd02lbh6i3pdt" path="res://icon.svg" id="1_ig7tw"]
 
-[node name="Circular" type="Node2D"]
-script = ExtResource("1_cadhu")
+[node name="Square" type="Node2D"]
+script = ExtResource("1_0xm2m")
 
 [node name="Mouse" type="Sprite2D" parent="."]
 modulate = Color(0, 1, 0, 1)
 position = Vector2(576, 24)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_amn7v")
+texture = ExtResource("1_ig7tw")
 
 [node name="Cat" type="Sprite2D" parent="."]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(576, 324)
 rotation = 3.14159
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_amn7v")
+texture = ExtResource("1_ig7tw")
 
 [node name="MouseCurve" type="Line2D" parent="."]
 z_index = -1
-default_color = Color(0, 1, 0, 0.078431375)
+default_color = Color(0, 1, 0, 0.15686275)
 
 [node name="CatCurve" type="Line2D" parent="."]
 z_index = -1
-default_color = Color(1, 0, 0, 0.078431375)
+default_color = Color(1, 0, 0, 0.15686275)
 
 [node name="ubar" type="HScrollBar" parent="."]
 offset_left = 12.0
@@ -72,17 +72,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "v = 5"
 horizontal_alignment = 1
-
-[node name="radiilabel" type="Label" parent="."]
-offset_left = 964.0
-offset_top = 10.0
-offset_right = 1147.0
-offset_bottom = 185.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "radii ratio:
-0.0"
-horizontal_alignment = 1
-autowrap_mode = 1
 
 [connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
